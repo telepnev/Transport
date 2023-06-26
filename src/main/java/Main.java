@@ -10,12 +10,13 @@ public class Main {
         Transport bicycle2 = new Bicycle("Gain", 2);
 
         ServiceStation station = new ServiceStation();
+        station.checkTransport(bicycle);
+        station.checkTransport(bicycle2);
         station.checkTransport(car);
         station.checkTransport(car2);
         station.checkTransport(truck);
         station.checkTransport(truck2);
-        station.checkTransport(bicycle);
-        station.checkTransport(bicycle2);
+
 
     }
 }

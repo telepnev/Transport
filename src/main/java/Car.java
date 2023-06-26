@@ -6,19 +6,19 @@ public class Car extends MotoTransport {
 
     @Override
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель у легковой машины " + getModelName());
     }
 
     @Override
     public void updateTyre() {
-        for (int i = 1; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку у машины " + getModelName() + " кол-во колес = " + i);
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку у легковой машины " + getModelName());
         }
     }
 
     @Override
     public void service() {
-        updateTyre();
         checkEngine();
+        updateTyre();
     }
 }

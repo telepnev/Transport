@@ -6,8 +6,8 @@ public class Bicycle extends Transport{
 
     @Override
     public void updateTyre() {
-        for (int i = 1; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку у велосипеда " + getModelName() + " кол-во колес = " + i);
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку у велосипеда " + getModelName());
         }
     }
 

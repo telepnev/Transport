@@ -6,15 +6,15 @@ public class Truck extends MotoTransport {
 
     @Override
     public void updateTyre() {
-        for (int i = 1; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку у грузовика " + getModelName() + i);
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку у грузовика " + getModelName());
         }
 
     }
 
     @Override
     public void checkEngine() {
-        System.out.println("Меняем покрышку у грузовика " + getModelName());
+        System.out.println("Проверяем двигатель у грузовика " + getModelName());
     }
 
     public void checkTrailer() {
@@ -23,8 +23,8 @@ public class Truck extends MotoTransport {
 
     @Override
     public void service() {
-        updateTyre();
         checkEngine();
         checkTrailer();
+        updateTyre();
     }
 }

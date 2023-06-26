@@ -1,27 +1,24 @@
 public abstract class Transport implements TransportService{
-    private String modelName;
-    private int wheelsCount;
+    private final String modelName;
+    private final int wheelsCount;
 
     public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
-
-    public abstract void updateTyre();
-
     public String getModelName() {
         return modelName;
     }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
+    public abstract void updateTyre();
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "modelName='" + modelName + '\'' +
+                ", wheelsCount=" + wheelsCount +
+                '}';
     }
 }
